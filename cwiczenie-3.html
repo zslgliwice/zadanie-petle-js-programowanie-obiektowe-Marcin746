@@ -21,8 +21,30 @@
 	
 		function ktora_cwiartka()
 		{
-			
-			
+			let x = document.getElementById("x").value;
+			let y = document.getElementById("y").value;
+
+            if(x==0 && y==0){
+                wynik.innerHTML="Punkt P=(0,0) jest początkiem układu współrzędnych"
+            }
+            if(x>0 && y>0){
+                wynik.innerHTML="Punkt znajduję się w pierwszej ćwiartce";
+            }
+            if(x<0 && y>0){
+                wynik.innerHTML="Punkt znajduję się w drugiej ćwiartce";
+            }
+            if(x<0 && y<0){
+                wynik.innerHTML="Punkt znajduję się w trzeciej ćwiartce";
+            }
+            if(x>0 && y<0){
+                wynik.innerHTML="Punkt znajduję się w czwartej ćwiartce";
+            }
+            if(x==0 && y!=0){
+                wynik.innerHTML="Punkt leży na jednej z osi układu"
+            }
+            if(x!=0 && y==0){
+                wynik.innerHTML="Punkt leży na jednej z osi układu"
+            }
 		}
 
 	</script>
