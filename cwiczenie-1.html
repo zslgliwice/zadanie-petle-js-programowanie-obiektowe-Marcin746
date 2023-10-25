@@ -12,7 +12,7 @@
 <body>
 
 	<label>
-		Podaj numer dnia tygodnia: <input type="number">
+		Podaj numer dnia tygodnia: <input type="number" id="number">
 	</label>
 	
 	<input type="submit" value="Zobacz nazwę dnia" onclick="getDayName()">
@@ -23,7 +23,35 @@
 	
 		function getDayName()
 		{
-					
+                if(document.getElementById("number").value==1){
+                    wynik.style.color="white";
+                    wynik.innerHTML="Pierwszy dzien tygodnia to Monday - poniedziałek"}	
+                if(document.getElementById("number").value==2){
+                    wynik.style.color="white";
+                    wynik.innerHTML="Drugi dzien tygodnia to Tuesday - wtorek"}	
+                if(document.getElementById("number").value==3){
+                    wynik.style.color="white";
+                    wynik.innerHTML="Trzeci dzien tygodnia to Wednesday - środa"}	
+                if(document.getElementById("number").value==4){
+                    wynik.style.color="white";
+                    wynik.innerHTML="Czwarty dzien tygodnia to Thursday - czwartek"}	
+                if(document.getElementById("number").value==5){
+                    wynik.style.color="yellow";
+                    wynik.innerHTML="Piąty dzien tygodnia to Friday - piątek"}	
+                if(document.getElementById("number").value==6){
+                    wynik.style.color="green";
+                    wynik.innerHTML="Szósty dzien tygodnia to Saturday - sobota"}	
+                if(document.getElementById("number").value==7){
+                    wynik.style.color="red";
+                    wynik.innerHTML="Pierwszy dzien tygodnia to Sunday - niedziela"}
+                if(document.getElementById("number").value>7){
+                    wynik.style.color="red";
+                    wynik.innerHTML="To nie jest prawidłowy numer dnia tygodnia";
+                }
+                if(document.getElementById("number").value<=0){
+                    wynik.style.color="red";
+                    wynik.innerHTML="To nie jest prawidłowy numer dnia tygodnia";
+                }
 			
 		}
 
