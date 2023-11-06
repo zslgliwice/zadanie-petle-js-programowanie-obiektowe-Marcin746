@@ -18,6 +18,13 @@
 	<input type="submit" value="Informacje o liczbach" onclick="matematyka()">
 
 	<div id="wynik"></div>
+	<div id="wynik1"></div>
+	<div id="wynik2"></div>
+	<div id="wynik3"></div>
+	<div id="wynik4"></div>
+	<div id="wynik5"></div>
+	<div id="wynik6"></div>
+	<div id="wynik7"></div>
 	
 	<script>
 	
@@ -27,6 +34,35 @@
 			var b = document.getElementById('b').value;
 			var c = document.getElementById('c').value;
 			
+            let najmniejsza=Math.min(a,b,c);
+            wynik.innerHTML="najmniejsza liczba z podanych liczb: "+najmniejsza;
+
+            let najwieksza=Math.max(a,b,c);
+            wynik1.innerHTML="największa liczba z podanych liczb: "+najwieksza;
+
+            let bezwzglednaA = Math.abs(a);
+            let bezwzglednaB = Math.abs(b);
+            let bezwzglednaC = Math.abs(c);
+
+            wynik2.innerHTML="wartość bezwzględna z "+a+" to "+bezwzglednaA;
+            wynik3.innerHTML="wartość bezwzględna z "+b+" to "+bezwzglednaB;
+            wynik4.innerHTML="wartość bezwzględna z "+c+" to "+bezwzglednaC;
+
+            if(a%2===0){
+                wynik5.innerHTML="liczba "+a+" jest parzysta";
+            }else if(a%2===1){
+                wynik5.innerHTML="liczba "+a+" jest nieparzysta";
+            }
+            if(b%2===0){
+                wynik6.innerHTML="liczba "+b+" jest parzysta";
+            }else if(b%2===1){
+                wynik6.innerHTML="liczba "+b+" jest nieparzysta";
+            }
+            if(c%2===0){
+                wynik7.innerHTML="liczba "+c+" jest parzysta";
+            }else if(c%2===1){
+                wynik7.innerHTML="liczba "+c+" jest nieparzysta";
+            }
 			
 		}
 
